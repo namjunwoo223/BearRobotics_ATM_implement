@@ -35,7 +35,7 @@ class AccountAPI:
             trg_index = self.__user[self.__user["number"] == int(args[0])].index.values[0]
             return self.__user.iloc[trg_index]["balance"]
             
-        if tasks == "1": # Deposit
+        elif tasks == "1": # Deposit
             trg_index = self.__user[self.__user["number"] == int(args[0])].index.values[0]
             self.__user.iloc[trg_index]["balance"] += args[1]
             self.__user.to_csv("database.csv", index = None)
