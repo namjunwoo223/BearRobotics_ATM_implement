@@ -28,10 +28,13 @@ if __name__ == '__main__':
     print(atm.API.user())
     
     #See Balance
+    print("--------- my balance -----------")
     atm.Balance()
     
     #Deposit
     atm.Deposit(50000)
+    
+    print("--------- diposit -----------")
     atm.Balance()
     
     #Withdraw
